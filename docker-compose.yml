@@ -9,6 +9,7 @@ services:
       - ./config/prometheus.yml:/etc/prometheus/prometheus.yml
       - ./config/alert_rules.yml:/etc/prometheus/alert_rules.yml
       - ./config/dynamic_targets.json:/etc/prometheus/dynamic_targets.json
+      - ./config/recording_rules.yml:/etc/prometheus/recording_rules.yml
   promlens:
     image: prom/promlens
     ports:
