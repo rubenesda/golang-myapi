@@ -28,6 +28,12 @@ scrape_configs:
     - action: labeldrop
       regex: instance|job
 
+  - job_name: pushgateway
+    scrape_interval: 30s
+    static_configs:
+    - targets:
+      - pushgateway:9091
+
 alerting:
   alertmanagers:
     - static_configs:
