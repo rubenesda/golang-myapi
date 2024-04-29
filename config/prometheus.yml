@@ -27,3 +27,9 @@ scrape_configs:
     metric_relabel_configs:
     - action: labeldrop
       regex: instance|job
+
+alerting:
+  alertmanagers:
+    - static_configs:
+      - targets:
+        - 'alertmanager:9093'
